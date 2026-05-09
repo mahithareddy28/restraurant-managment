@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Management</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🍽️ Restaurant Management System</h1>
+
+    <a class="reserve-btn" href="/reserve">
+        Reserve Table
+    </a>
+
+    <div class="menu-grid">
+
+        {% for item in menu_items %}
+
+        <div class="card">
+
+            <h2>{{ item.item_name }}</h2>
+
+            <p>💰 Price: ₹{{ item.price }}</p>
+
+            <p>📦 Stock: {{ item.stock }}</p>
+
+            <a href="/order/{{ item.id }}">
+                Order Now
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

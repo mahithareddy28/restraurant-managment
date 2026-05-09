@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reserve Table</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+
+    <h1>Reserve Table 🍴</h1>
+
+    <form method="POST">
+
+        <input type="text"
+               name="customer_name"
+               placeholder="Enter Your Name"
+               required>
+
+        <input type="number"
+               name="table_number"
+               placeholder="Enter Table Number"
+               required>
+
+        <button type="submit">
+            Reserve
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
